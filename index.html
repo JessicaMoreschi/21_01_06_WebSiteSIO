@@ -7,8 +7,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
   <meta name="Resource-type" content="Document" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/font/stylesheet.css" type="text/css" charset="utf-8" />
   <style>
     body {
       padding: 0;
@@ -26,7 +25,7 @@
   		height: 10%;
   		display:block;
   		width: 100%;
-  		background: #f9f9f8;
+  		background-color: transparent;
   		z-index:9;
   		padding: 0 0 0 0;
   	}
@@ -34,12 +33,28 @@
   	#header{
   		top:0px;
   	}
+
   	#footer{
   		bottom:0px;
       height: 5%;
-      border-top-color: #887b86;
-      border-top-style: solid;
-      border-top-width: 0.5px;
+      border-top-color: #000000;
+      border-top-style: dotted;
+      border-top-width: 1.5px;
+      background-color: transparent
+    }
+
+      #section0{
+        background-image: url(assets/paper.jpg);
+      }
+
+      #section1{
+        background-image: url(assets/paper.jpg);
+      }
+
+      #section2{
+        background-image: url(assets/paper.jpg);
+      }
+
   	}
 
   </style>
@@ -57,14 +72,9 @@
 
 <div id="header">
   <div class="header">
-    <a href="index.html#firstPage" class="header" id="logo"> </a>
-    <div class="voci">
-    <a href="about.html" class="voci" id="aboutus"> ABOUT</a>
-    <a href="kit.html" class="voci" id="strumentikit">&nbsp&nbsp&nbspKIT&nbsp&nbsp&nbsp</a>
-    </div>
+    <img class="header" id="logo" src="./assets/frecciaDx.svg" height="15px" href="index.html#firstPage">
     <a href="index.html#3rdPage" class="voci2">
-      <div class="voci2" id="iconStadioHeader"></div>
-      <p class="voci2" id="voceTifo">TIFO</p>
+      <p class="voci2" id="voceTifo">Diary</p>
     </a>
   </div>
 </div>
@@ -75,80 +85,55 @@
 <div id="fullpage">
   <div class="section " id="section0">
     <div class="intro">
-      <div class="testoSx">
-        <p id="titolo1"> <font color="#b7aeb5">Dodicesimo Uomo, </font> <br> il vero tifo. </p>
-        <p id="testo1">Migliora le performance della squadra, e le tue.
-          <br> Prendi parte ad un momento collettivo.</p>
-        <a href="#3rdPage"><button class="bt1" >inizia a tifare</button></a>
-        <a href="about.html"><button class="bt2">About</button></a>
-      </div>
-      <div class="imgDestra">
-        <img src="./assets/imgBackground.svg" >
+      <div class="testo">
+        <p id="titolo1"> A diary for everyone. </p>
+        <p id="testo1">Hello e welcome to <font face="typekaM">spit it out!</font>,
+          <br> an online common secret diary!</p>
+        <a href="about.html"><button class="bt1" >Write diary</button></a>
+        <a href="#secondPage"><button class="bt2">What is it?</button></a>
       </div>
       <a href="#secondPage"><img id="arrow" src="./assets/freccia.svg" height="15px"></a>
+      <a href="#3rdPage" id="credits">Credits</a>
     </div>
   </div>
 
   <div class="section" id="section1">
     <div class="slide" id="slide1">
       <div class="intro">
-        <div class="testoSx">
-          <p id="titolo1"> <font color="#b7aeb5"> Un nuovo modo </font> <br> di tifare. </p>
-          <p id="testo1">Porta il tuo supporto nello stadio,
-            <br> tifando comodamente da casa.</p>
-          <a href="#3rdPage"><button class="bt1" >inizia a tifare</button></a>
-          <a href="kit.html"><button class="bt2">Kit</button></a>
-        </div>
-        <div class="imgDestra" id="imgDestra2">
-          <img src="./assets/imgCond.svg" >
-          <p class="condizioni" id="condizioniEstr"> <b> <font color="#b7aeb5"> NESSUNA </font>  <br> ESUBERANZA</b></p>
-          <p class="condizioni"> <b> <font color="#b7aeb5"> &nbsp&nbsp&nbsp&nbsp NESSUNA </font>  <br> &nbsp&nbsp&nbsp SPONTANEITÀ</b></p>
-          <p class="condizioni"> <b> <font color="#b7aeb5"> NESSUNA &nbsp&nbsp&nbsp&nbsp </font>  <br> AVVERSIONE &nbsp&nbsp&nbsp&nbsp</b></p>
-          <p class="condizioni" id="condizioniEstr"> <b> <font color="#b7aeb5"> NESSUNA </font>  <br> SCARAMANZIA</b></p>
+        <div class="testo">
+          <p id="titolo1"> What is it? </p>
+          <div id="testoSx">
+            <p id="testo1">Our patience has been severely tested because of the lockdown implications.
+               We <font face="typekaM"> faced a lot of problems</font>, unexpected events and
+               other things that have threatened our mental integrity.
+               But we can <font face="typekaM">bring out the best </font> from this situation:
+               now it’s your chance to tell everyone how you’re feeling
+               <font face="typekaM">through creativity! </font></p>
+          </div>
+          <div id="testoDx">
+            <p id="testo1">With this website you’ll be able to record your true emotions
+               and deep feelings in order to create a beautiful artwork in
+               <font face="typekaM">collaboration</font> with people around the world.
+              <br> Oh, and remember: this is a <font face="typekaM">secret diary</font>, so your identity
+               will be hidden to other users…
+               <font face="typekaM">Feel free</font> to say what you really think, let’s start!</p>
+          </div>
+          <a href="about.html"><button class="bt1" >Write diary</button></a>
         </div>
         <a href="#3rdPage"><img id="arrow" src="./assets/freccia.svg" height="15px"></a>
+        <a href="#3rdPage" id="credits">Credits</a>
       </div>
     </div>
   </div>
 
   <div class="section" id="section2">
     <div class="intro">
-          <table>
-          <thead>
-          <tr><th width="15%"></th><th colspan="8">PARTITA IN CORSO</th></tr>
-          </thead>
-          <tbody>
-            <tr><td width="15%"></td> <td><img src="./assets/clock.svg" height="11px">&nbsp21'</td><td><input type="radio" name="selTm1" onclick="document.getElementById('checkTifa1').disabled = false;">&nbsp Squadra<b>TM0</b></td><td><input type="radio" name="selTm1" onclick="document.getElementById('checkTifa1').disabled = false;">&nbsp Squadra<b>TM1</b></td>
-              <td><b>1:0</b></td><td>Vittoria<b>TM0 80%</b></td><td>Cod. <b>TM0TM100</b></td><td><button class="btnTab" id="checkTifa1" disabled="true" onClick="parent.open('https://webapp-dodicesimouomo-prova.herokuapp.com')" >Tifa</button></td> <td width="15%"></td></tr>
-            <tr><td width="15%"></td> <td><img src="./assets/clock.svg" height="11px">&nbsp15'</td><td><input type="radio" name="selTm2" onclick="document.getElementById('checkTifa2').disabled = false;">&nbsp Squadra<b>TM2</b></td><td><input type="radio" name="selTm2" onclick="document.getElementById('checkTifa2').disabled = false;">&nbsp Squadra<b>TM3</b></td>
-              <td><b>0:0</b></td><td>Vittoria<b>TM2 81%</b></td><td>Cod. <b>TM2TM301</b></td><td><button class="btnTab" id="checkTifa2" disabled="true" onClick="parent.open('https://webapp-dodicesimouomo-prova.herokuapp.com')" >Tifa</button></td> <td width="15%"></td></tr>
-            <tr><td width="15%"></td> <td><img src="./assets/clock.svg" height="11px">&nbsp71'</td><td><input type="radio" name="selTm3" onclick="document.getElementById('checkTifa3').disabled = false;">&nbsp Squadra<b>TM4</b></td><td><input type="radio" name="selTm3" onclick="document.getElementById('checkTifa3').disabled = false;">&nbsp Squadra<b>TM5</b></td>
-              <td><b>1:1</b></td><td>Vittoria<b>TM5 91%</b></td><td>Cod. <b>TM4TM502</b></td><td><button class="btnTab" id="checkTifa3" disabled="true" onClick="parent.open('https://webapp-dodicesimouomo-prova.herokuapp.com')" >Tifa</button></td> <td width="15%"></td></tr>
-            <tr><td width="15%"></td> <td><img src="./assets/clock.svg" height="11px">&nbsp81'</td><td><input type="radio" name="selTm4" onclick="document.getElementById('checkTifa4').disabled = false;">&nbsp Squadra<b>TM6</b></td><td><input type="radio" name="selTm4" onclick="document.getElementById('checkTifa4').disabled = false;">&nbsp Squadra<b>TM6</b></td>
-              <td><b>2:1</b></td><td>Vittoria<b>TM6 91%</b></td><td>Cod. <b>TM6TM703</b></td><td><button class="btnTab" id="checkTifa4" disabled="true" onClick="parent.open('https://webapp-dodicesimouomo-prova.herokuapp.com')" >Tifa</button></td> <td width="15%"></td></tr>
-            <tr><td width="15%"></td> <td><img src="./assets/clock.svg" height="11px">&nbsp91'</td><td><input type="radio" name="selTm5" onclick="document.getElementById('checkTifa5').disabled = false;">&nbsp Squadra<b>TM8</b></td><td><input type="radio" name="selTm5" onclick="document.getElementById('checkTifa5').disabled = false;">&nbsp Squadra<b>TM9</b></td>
-              <td><b>0:1</b></td><td>Vittoria<b>TM9 99%</b></td><td>Cod. <b>TM8TM904</b></td><td><button class="btnTab" id="checkTifa5" disabled="true" onClick="parent.open('https://webapp-dodicesimouomo-prova.herokuapp.com')" >Tifa</button></td> <td width="15%"></td></tr>
-            </tbody>
-          </table>
-
-
-          <table>
-          <thead>
-          <tr><th width="15%"></th><th colspan="8">PROSSIME PARTITE</th></tr>
-          </thead>
-          <tbody>
-          <tr><td width="15%"></td> <td>14:00</td><td><input type="radio" name="selTm6" onclick="document.getElementById('checkTifa6').disabled = false;">&nbsp Squadra<b>TM0</b></td><td><input type="radio" name="selTm6" onclick="document.getElementById('checkTifa6').disabled = false;">&nbsp Squadra<b>TM1</b></td><td><b>0:0</b></td><td>Vittoria<b>TM0 70%</b></td>
-            <td>Cod. <b>TM0TM100</b></td><td><button class="btnTab" id="checkTifa6" disabled="true" onClick="parent.open('https://webapp-dodicesimouomo-prova.herokuapp.com')" >Entra</button></td> <td width="15%"></td></tr>
-          <tr><td width="15%"></td> <td>15:00</td><td><input type="radio" name="selTm7" onclick="document.getElementById('checkTifa7').disabled = false;">&nbsp Squadra<b>TM2</b></td><td><input type="radio" name="selTm7" onclick="document.getElementById('checkTifa7').disabled = false;">&nbsp Squadra<b>TM3</b></td><td><b>0:0</b></td><td>Vittoria<b>TM2 61%</b></td>
-            <td>Cod. <b>TM2TM301</b></td><td><button class="btnTab" id="checkTifa7" disabled="true" onClick="parent.open('https://webapp-dodicesimouomo-prova.herokuapp.com')" >Entra</button></td> <td width="15%"></td></tr>
-          <tr><td width="15%"></td> <td>18:00</td><td><input type="radio" name="selTm8" onclick="document.getElementById('checkTifa8').disabled = false;">&nbsp Squadra<b>TM4</b></td><td><input type="radio" name="selTm8" onclick="document.getElementById('checkTifa8').disabled = false;">&nbsp Squadra<b>TM5</b></td><td><b>0:0</b></td><td>Vittoria<b>TM5 71%</b></td>
-            <td>Cod. <b>TM4TM502</b></td><td><button class="btnTab" id="checkTifa8" disabled="true" onClick="parent.open('https://webapp-dodicesimouomo-prova.herokuapp.com')" >Entra</button></td> <td width="15%"></td></tr>
-          <tr><td width="15%"></td> <td>21:00</td><td><input type="radio" name="selTm9" onclick="document.getElementById('checkTifa9').disabled = false;">&nbsp Squadra<b>TM6</b></td><td><input type="radio" name="selTm9" onclick="document.getElementById('checkTifa9').disabled = false;">&nbsp Squadra<b>TM6</b></td><td><b>0:0</b></td><td>Vittoria<b>TM6 81%</b></td>
-            <td>Cod. <b>TM6TM703</b></td><td><button class="btnTab" id="checkTifa9" disabled="true" onClick="parent.open('https://webapp-dodicesimouomo-prova.herokuapp.com')" >Entra</button></td> <td width="15%"></td></tr>
-          <tr><td width="15%"></td> <td>21:00</td><td><input type="radio" name="selTm10" onclick="document.getElementById('checkTifa10').disabled = false;">&nbsp Squadra<b>TM8</b></td><td><input type="radio" name="selTm10" onclick="document.getElementById('checkTifa10').disabled = false;">&nbsp Squadra<b>TM9</b></td><td><b>0:0</b></td><td>Vittoria<b>TM9 61%</b></td>
-            <td>Cod. <b>TM8TM904</b></td><td><button class="btnTab" id="checkTifa10" disabled="true" onClick="parent.open('https://webapp-dodicesimouomo-prova.herokuapp.com')" >Entra</button></td> <td width="15%"></td></tr>
-          </tbody>
-          </table>
+      <div class="testo">
+        <p id="titolo1"> Credits. </p>
+        <p id="testo1">Hello e welcome to spit it out,
+          <br> an online common secret diary!</p>
+      </div>
+      <a href="#firstPage"><img id="arrow" src="./assets/frecciaUp.svg" height="15px"></a>
     </div>
   </div>
 </div>
@@ -162,7 +147,7 @@
 <script type="text/javascript">
   var myFullpage = new fullpage('#fullpage', {
     anchors: ['firstPage', 'secondPage', '3rdPage'],
-    sectionsColor: ['#F9F9F8', '#F9F9F8', '#f9f9f8'],
+    // sectionsColor: ['#ffffff', '#ffffff', '#ffffff'],
     navigation: true,
     navigationPosition: 'right',
     css3: true
