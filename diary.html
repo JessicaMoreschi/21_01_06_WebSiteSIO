@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SpitItOut! | Home</title>
+  <link rel="icon" href="./assets/logo.svg">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+  <meta name="Resource-type" content="Document" />
+  <link rel="stylesheet" href="assets/font/stylesheet.css" type="text/css" charset="utf-8" />
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  	/* Centered texts in each section
+  	* --------------------------------------- */
+  	.section{
+  		text-align:center;
+  	}
+  	/* Fixed header and footer.
+  	* --------------------------------------- */
+  	#header, #footer{
+  		position:fixed;
+  		height: 10%;
+  		display:block;
+  		width: 100%;
+  		background-color: transparent;
+  		z-index:9;
+  		padding: 0 0 0 0;
+  	}
+
+  	#header{
+  		top:0px;
+  	}
+
+  	#footer{
+  		bottom:0px;
+      height: 5%;
+      border-top-color: #000000;
+      border-top-style: dotted;
+      border-top-width: 1.5px;
+      background-color: transparent
+    }
+
+      #section0{
+        background-image: url(assets/paper.jpg);
+      }
+
+  	}
+
+  </style>
+  <link href="website.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./dist/fullpage.css" />
+  <link rel="stylesheet" type="text/css" href="examples.css" />
+  <script src="p5.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+  <script type="text/javascript" src="./dist/fullpage.js"></script>
+
+</head>
+
+<body>
+
+<div id="header">
+  <div class="header">
+    <img class="header" id="logo" src="./assets/frecciaDx.svg" height="15px" href="index.html#firstPage">
+    <a href="index.html#3rdPage" class="voci2">
+      <p class="voci2" id="voceTifo">Diary</p>
+    </a>
+  </div>
+</div>
+
+<div id="fullpage">
+  <div class="section " id="section0">
+    <div class="intro">
+    </div>
+  </div>
+
+
+  <div id="footer">
+    <div class="footer">
+      <p>© SpitItOut!  |  Privacy Notice – Cookie Notice  – FAQ</p>
+    </div>
+  </div>
+
+<script type="text/javascript">
+  var myFullpage = new fullpage('#fullpage', {
+    // anchors: ['firstPage', 'secondPage', '3rdPage'],
+    // sectionsColor: ['#F9F9F8', '#F9F9F8', '#f9f9f8'],
+    navigation: false,
+    navigationPosition: 'right',
+    css3: true
+  });
+</script>
+
+</body>
