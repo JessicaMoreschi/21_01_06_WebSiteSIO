@@ -113,7 +113,7 @@ a:link, a:visited, .voci a:link, .voci a:visited{
   float: right;
 }
 
-#titolo1 {
+#titolo1, #titolo2, #titolo3 {
   font-family: 'typekaR', sans-serif;
   margin-left: -5%;
   font-size: 25pt;

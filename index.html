@@ -71,6 +71,7 @@
   <script src="p5.sound.min.js"></script>
   <script src="sketch.js"></script>
   <script type="text/javascript" src="./dist/fullpage.js"></script>
+  <script src='./assets/typewriterjs/dist/core.js'></script>
 
 </head>
 
@@ -92,7 +93,17 @@
   <div class="section " id="section0">
     <div class="intro">
       <div class="testo">
-        <p id="titolo1"> A diary for everyone. </p>
+
+        <p id="titolo1">  </p>
+        <script type='text/javascript'>
+            const instance = new Typewriter('#titolo1', {
+              strings: ['A diary for everyone'],
+              autoStart: true,
+              loop: true,
+              deleteSpeed:5,
+              pauseFor: 2000
+            });
+        </script>
         <p id="testo1">Hello e welcome to <font face="typekaM">spit it out!</font>,
           <br> an online common secret diary!</p>
         <a href="diary.html"><button class="bt1" >Write diary</button></a>
@@ -107,7 +118,16 @@
     <div class="slide" id="slide1">
       <div class="intro">
         <div class="testo">
-          <p id="titolo1"> What is it? </p>
+          <p id="titolo2"> </p>
+          <script type='text/javascript'>
+                new Typewriter('#titolo2', {
+                strings: ['What is it?'],
+                autoStart: true,
+                loop: true,
+                deleteSpeed:5,
+                pauseFor: 2000
+              });
+          </script>
           <div id="testoSx">
             <p id="testo1">Our patience has been severely tested because of the lockdown implications.
                We <font face="typekaM"> faced a lot of problems</font>, unexpected events and
@@ -135,7 +155,16 @@
   <div class="section" id="section2">
     <div class="intro">
       <div class="testo">
-        <p id="titolo1"> Credits. </p>
+        <p id="titolo3"> </p>
+        <script type='text/javascript'>
+              new Typewriter('#titolo3', {
+              strings: ['Credits.'],
+              autoStart: true,
+              loop: true,
+              deleteSpeed:5,
+              pauseFor: 2000
+            });
+        </script>
         <p id="testo1">Hello e welcome to spit it out,
           <br> an online common secret diary!</p>
       </div>
