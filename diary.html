@@ -77,12 +77,12 @@
 <div id="fullpage">
   <div class="section " id="section0">
     <div class="intro">
-      <div class="canvas">
-      </div>
+      <iframe class="canvas" src="./canvas/index.html">
+      </iframe>
       <div id="panel">
       </div>
-      <input type="image" id="imgBt3" value="Write diary" onclick="document.getElementById('panel').style.backgroundColor = 'black'; document.getElementById('imgBt4').style.color = '#ffffff'; document.getElementById('panel').style.zIndex = '1'">
-      <input id="imgBt4" value="x" onclick="document.getElementById('panel').style.backgroundColor = 'transparent'; document.getElementById('imgBt4').style.color = 'transparent'; document.getElementById('panel').style.zIndex = '0'">
+      <input type="image" id="imgBt3" value="Write diary" onclick="document.getElementById('panel').style.display = 'flex'; document.getElementById('imgBt4').style.display = 'flex'">
+      <input id="imgBt4" value="x" onclick="document.getElementById('panel').style.display = 'none'; document.getElementById('imgBt4').style.display = 'none'">
     </div>
   </div>
 
@@ -95,8 +95,6 @@
 
 <script type="text/javascript">
   var myFullpage = new fullpage('#fullpage', {
-    // anchors: ['firstPage', 'secondPage', '3rdPage'],
-    // sectionsColor: ['#F9F9F8', '#F9F9F8', '#f9f9f8'],
     navigation: false,
     navigationPosition: 'right',
     css3: true
