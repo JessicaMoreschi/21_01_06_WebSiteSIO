@@ -30,18 +30,14 @@ body {
 }
 
 #logo {
-  width: auto;
-  height: 20px;
+  width: 5%;
   margin: auto;
   margin-left: 5%;
   border: none;
   background-repeat: no-repeat;
+  background-size: contain;
   z-index: 1;
-  background-color: 0
-}
-
-#logo:hover{
-  opacity: 0.5;
+  transform: rotateX(-180deg);
 }
 
 .voci2 {
@@ -75,17 +71,42 @@ a:link, a:visited, .voci a:link, .voci a:visited{
 }
 
 
-#voceTifo {
-  width: 100%;
+#diary {
+  width: 30%;
   height: 100%;
   padding:0;
-  right: 0;
+  right: 0%;
   text-align: right;
   line-height: 28.125px;
   border: none;
 }
 
-#voceTifo:hover, #iconStadioHeader:hover, #headerTifo:hover {
+#iconDiary{
+  top: 0%;
+  left:33%;
+  right: auto;
+  width: 35%;
+  height: 100%;
+  padding:0;
+  right: 0;
+  border: none;
+  background-image: url("./assets/06.1_Diary fermo.png");
+}
+
+#iconDiary:hover{
+  top: 0%;
+  left:33%;
+  right: auto;
+  width: 35%;
+  height: 100%;
+  padding:0;
+  right: 0;
+  border: none;
+  background-image: url("./assets/06.2_Diary.gif");
+}
+
+
+#diary:hover, #iconStadioHeader:hover, #headerTifo:hover {
   border-bottom-style: none;
 }
 
@@ -121,66 +142,92 @@ a:link, a:visited, .voci a:link, .voci a:visited{
 }
 
 
-button {
+input {
   font-family: 'typekaM', sans-serif;
-  background-color: transparent;
-  border-color: #000000;
-  border-style: dotted;
-  border-width: 1.5px;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
-  line-height: 3px;
   text-decoration: none;
   display: inline-block;
-  width: auto;
-  border-radius: 30px;
-  padding: 10px 10px 10px 10px;
-  margin-top: 1%;
-  margin-right: 2.5%;
   cursor: pointer;
   float: none;
-}
-
-.bt1 {
-  background-color: #000000;
-  border-color: #000000;
-  border-style: solid;
-  color: #ffffff;
-}
-
-.bt1:hover {
+  margin: 0;
+  padding: 0.5%;
+  padding-left: 15pt;
+  width: 70pt;
+  height: 10pt;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: transparent;
-  border-color: #000000;
-  color: #000000;
+  border:0 none;
+  outline: none;
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
 }
+
+
+
+#imgBt1{
+  color: #ffffff;
+  background-image: url("./assets/08.1_Bottone pieno fermo.png");
+}
+
+#imgBt2{
+  color: #000000;
+  background-image: url("./assets/09.1_Bottone traccia fermo.png");
+}
+
+#imgBt1:hover, #imgBt3:hover{
+  background-image: url("./assets/08.2_Bottone pieno.gif");
+}
+
+#imgBt2:hover{
+  background-image: url("./assets/09.2_Bottone traccia.gif");
+}
+
+
 
 #payOff{
   margin-top: 10%
 }
 
-button:hover {
-  background-color: #000000;
-  border-color: #000000;
-  color: #ffffff;
-}
 
 
 #arrow {
   position: absolute;
   top: 80%;
-  left: 50%;
-}
-
-#credits{
-  position: absolute;
-  top: 80%;
-  text-align: right;
-  right: 5%;
-  font-family:'typekaM'
+  left: 48%;
+  width: 1.5%;
+  background-image: url("./assets/07.1_freccia navigazione ferma.png");
 }
 
 #arrow:hover {
-  top: 81%;
+  background-image: url("./assets/07.2_freccia navigazione.gif");
+  transform: translateY(+5px)
+}
+
+#arrow2 {
+  position: absolute;
+  top: 80%;
+  left: 48%;
+  width: 2%;
+  transform: rotateX(180deg);
+  background-image: url("./assets/07.1_freccia navigazione ferma.png");
+}
+
+#arrow2:hover {
+  background-image: url("./assets/07.2_freccia navigazione.gif");
+  transform: rotateX(180deg) translateY(+5px);
+}
+
+
+
+#credits{
+  position: absolute;
+  bottom: 20%;
+  text-align: right;
+  right: 5%;
+  font-family:'typekaM'
 }
 
 .footer {
@@ -190,4 +237,57 @@ button:hover {
   height: 100%;
   margin-right: 2.5%;
   font-size: 8pt;
+}
+
+.underlineCredits{
+  position: absolute;
+  top: 77%;
+  width: 10%;
+  right: 2%;
+  opacity: 0;
+}
+
+
+.underlineCredits:hover{
+  opacity: 1
+}
+
+.canvas{
+  position: absolute;
+  margin: 0;
+  top: 10%;
+  height: 85%;
+  width: 100%;
+}
+
+#imgBt3{
+  position: absolute;
+  margin: 0;
+  bottom: 20%;
+  right: 5%;
+  color: #ffffff;
+  background-image: url("./assets/08.1_Bottone pieno fermo.png");
+}
+
+#imgBt4{
+  position: absolute;
+  margin: 0;
+  bottom: 70%;
+  width: 10px;
+  right: 6%;
+  color: transparent;
+  /* background-image: url("./assets/08.1_Bottone pieno fermo.png"); */
+  z-index: 1;
+}
+
+#panel{
+  position: absolute;
+  margin: 0;
+  bottom: 20%;
+  right: 5%;
+  height: 55%;
+  width: 25%;
+  background-color: transparent;
+  border-radius: 20px 20px 20px 20px;
+  z-index: 0;
 }

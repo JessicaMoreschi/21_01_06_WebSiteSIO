@@ -43,9 +43,11 @@
       background-color: transparent
     }
 
-      #section0{
-        background-image: url(assets/paper.jpg);
-      }
+    #section0 {
+      /* background-image: url(assets/paper1.jpg); */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
   	}
 
@@ -62,18 +64,25 @@
 
 <body>
 
-<div id="header">
-  <div class="header">
-    <a href="index.html#firstPage" class="header" id="logo" height="15px"><img src="./assets/frecciaDx.svg"></a>
-    <a href="diary.html" class="voci2">
-      <p class="voci2" id="voceTifo">Diary</p>
-    </a>
+  <div id="header">
+    <div class="header">
+      <a href="index.html#firstPage" class="header" height="15px"><img id="logo" src="./assets/07.2_freccia navigazione.gif"></a>
+      <a href="diary.html" class="voci2">
+        <input class="voci2" id="iconDiary">
+        <p class="voci2" id="diary">Diary</p>
+      </a>
+    </div>
   </div>
-</div>
 
 <div id="fullpage">
   <div class="section " id="section0">
     <div class="intro">
+      <div class="canvas">
+      </div>
+      <div id="panel">
+      </div>
+      <input type="image" id="imgBt3" value="Write diary" onclick="document.getElementById('panel').style.backgroundColor = 'black'; document.getElementById('imgBt4').style.color = '#ffffff'; document.getElementById('panel').style.zIndex = '1'">
+      <input id="imgBt4" value="x" onclick="document.getElementById('panel').style.backgroundColor = 'transparent'; document.getElementById('imgBt4').style.color = 'transparent'; document.getElementById('panel').style.zIndex = '0'">
     </div>
   </div>
 
