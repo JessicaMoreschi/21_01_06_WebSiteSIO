@@ -12,7 +12,9 @@
   <script src="./dist/p5.min.js"></script>
   <!-- <script src="./dist/p5.sound.min.js"></script> -->
   <script type="text/javascript" src="./dist/fullpage.js"></script>
-  <script src='./assets/typewriter/dist/core.js'></script>
+  <script type="text/javascript" src="./public/sketchMic.js"></script>
+  <script type="text/javascript" src="./public/sketchSlider.js"></script>
+
   <style>
     body {
       padding: 0;
@@ -76,6 +78,7 @@
 
     }
   </style>
+
 </head>
 
 <body>
@@ -103,6 +106,8 @@
             <div class="testoPanel">
               <p>How did you <font face="typekaM">feel</font> <br> during the <font face="typekaM">quarantine?</font></p>
             </div>
+            <div id="slider">
+            </div>
             <a href="#firstPage/slide3"> <input id="arrowPanel"> </a>
           </div>
         </div>
@@ -111,6 +116,8 @@
           <div class="intro">
             <div class="testoPanel">
               <p>Click on the <font face="typekaM">mic</font> <br> and <font face="typekaM">Spit It Out!</font></p>
+            </div>
+            <div id="mic">
             </div>
             <a href="#firstPage/slide4"> <input id="arrowPanel"> </a>
           </div>
@@ -134,6 +141,7 @@
 
 
   <script type="text/javascript">
+
     var myFullpage = new fullpage('#fullpage', {
       anchors: ['firstPage'],
       sectionsColor: ['#000000'],

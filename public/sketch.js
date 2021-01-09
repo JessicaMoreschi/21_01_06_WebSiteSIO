@@ -28,7 +28,6 @@ var sketch = function(p) {
     for (var i = 0; i < agentCount; i++) {
       agents[i] = new Agent(p.random(p.width), p.random(p.height));
     }
-    console.log(vol_1);
   };
 
   p.draw = function() {

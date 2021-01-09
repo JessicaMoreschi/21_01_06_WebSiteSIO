@@ -5,6 +5,8 @@ body {
   background-color: transparent;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
   padding: 0;
   margin: 0;
   top: 0%;
@@ -170,7 +172,20 @@ input {
   border-color: transparent;
 }
 
+button,
+input[type="image"] {
+  border: none;
+  outline: none;
+}
 
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+  border: none;
+}
 
 #imgBt1{
   color: #ffffff;
@@ -321,4 +336,8 @@ input {
   z-index: 1;
   border: none;
   outline:none
+}
+
+#slider, #mic{
+  margin-bottom: 10%
 }
