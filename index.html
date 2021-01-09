@@ -3,15 +3,46 @@
 
 <head>
   <title>SpitItOut! | Home</title>
-  <link rel="icon" href="./assets/freccia.svg">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
   <meta name="Resource-type" content="Document" />
   <link rel="stylesheet" href="assets/font/stylesheet.css" type="text/css" charset="utf-8" />
+  <link href="./style/website.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./dist/fullpage.css" />
+  <script src="./dist/p5.min.js"></script>
+  <!-- <script src="./dist/p5.sound.min.js"></script> -->
+  <script type="text/javascript" src="./dist/fullpage.js"></script>
+  <script src='./assets/typewriter/dist/core.js'></script>
   <style>
     body {
       padding: 0;
       margin: 0;
+      color: #000000;
+    }
+
+    #fp-nav ul li a.active span,
+    .fp-slidesNav ul li a.active span,
+    #fp-nav ul li:hover a.active span,
+    .fp-slidesNav ul li:hover a.active span{
+        border-radius: 100%;
+        background: #000000;
+     }
+    #fp-nav ul li a span,
+    .fp-slidesNav ul li a span {
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+        height: 8px;
+        width: 8px;
+        border: 0;
+        background: rgba(0, 0, 0, 0.1);
+        left: 0%;
+        top: 50%;
+        margin: -4px 0 0 -4px;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -o-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
     }
 
     /* Centered texts in each section
@@ -47,41 +78,32 @@
     }
 
     #section0 {
-      background-image: url(assets/paper1.jpg);
+      background-image: url(assets/image/paper1.jpg);
       background-repeat: no-repeat;
       background-size: cover;
     }
 
     #section1 {
-      background-image: url(assets/paper2.jpg);
+      background-image: url(assets/image/paper2.jpg);
       background-repeat: no-repeat;
       background-size: cover;
     }
 
     #section2 {
-      background-image: url(assets/paper3.jpg);
+      background-image: url(assets/image/paper3.jpg);
       background-repeat: no-repeat;
       background-size: cover;
     }
 
     }
   </style>
-  <link href="website.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="./dist/fullpage.css" />
-  <link rel="stylesheet" type="text/css" href="examples.css" />
-  <script src="p5.min.js"></script>
-  <script src="p5.sound.min.js"></script>
-  <script src="sketch.js"></script>
-  <script type="text/javascript" src="./dist/fullpage.js"></script>
-  <script src='./assets/typewriter/dist/core.js'></script>
-
 </head>
 
 <body>
 
   <div id="header">
     <div class="header">
-      <a href="index.html#firstPage" class="header" height="15px"><img id="logo" src="./assets/07.2_freccia navigazione.gif"></a>
+      <a href="index.html#firstPage" class="header" height="15px"><img id="logo" src="./assets/image/07.2_freccia navigazione.gif"></a>
       <a href="diary.html" class="voci2">
         <input class="voci2" id="iconDiary">
         <p class="voci2" id="diary">Diary</p>
@@ -106,7 +128,7 @@
         </div>
         <a href="#secondPage"><input id="arrow"></a>
         <a href="#3rdPage" id="credits">Credits</a>
-        <a href="#3rdPage"><img class="underlineCredits" src="./assets/01_sottolineatura.gif"></a>
+        <a href="#3rdPage"><img class="underlineCredits" src="./assets/image/01_sottolineatura.gif"></a>
       </div>
     </div>
 
@@ -138,7 +160,7 @@
           </div>
           <a href="#3rdPage"><input id="arrow"></a>
           <a href="#3rdPage" id="credits">Credits</a>
-          <a href="#3rdPage"><img class="underlineCredits" src="./assets/01_sottolineatura.gif"></a>
+          <a href="#3rdPage"><img class="underlineCredits" src="./assets/image/01_sottolineatura.gif"></a>
         </div>
       </div>
     </div>

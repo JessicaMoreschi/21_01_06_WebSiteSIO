@@ -71,7 +71,7 @@ html.fp-enabled,
     transform: translate3d(0,0,0);
 }
 .fp-controlArrow.fp-prev {
-  background-image: url("../assets/frecciaSx.svg");
+  background-image: url("../assets/image/07.1_freccia navigazione ferma.png");
   background-repeat: no-repeat;
   position: absolute;
   left: 15%;
@@ -82,7 +82,7 @@ html.fp-enabled,
   display: none;
 }
 .fp-controlArrow.fp-next {
-    background-image: url("../assets/frecciaDx.svg");
+    background-image: url("../assets/image/07.1_freccia navigazione ferma.png");
     background-repeat: no-repeat;
     position: absolute;
     right: 50%;
@@ -167,12 +167,12 @@ html.fp-enabled,
     cursor: pointer;
     text-decoration: none;
 }
-#fp-nav ul li a.active span,
+/* #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span{
     border-radius: 100%;
-    background: #000000;
+    background: #ffffff;
  }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
@@ -182,7 +182,7 @@ html.fp-enabled,
     height: 8px;
     width: 8px;
     border: 0;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     left: 0%;
     top: 50%;
     margin: -4px 0 0 -4px;
@@ -190,7 +190,7 @@ html.fp-enabled,
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
-}
+} */
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span{
     width: 10px;

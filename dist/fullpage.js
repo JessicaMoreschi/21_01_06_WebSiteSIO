@@ -129,7 +129,7 @@
             easingcss3: 'ease',
             loopBottom: false,
             loopTop: false,
-            loopHorizontal: true,
+            loopHorizontal: false,
             continuousVertical: false,
             continuousHorizontal: false,
             scrollHorizontally: false,
@@ -153,7 +153,7 @@
             recordHistory: true,
 
             //design
-            controlArrows: true,
+            controlArrows: false,
             controlArrowColor: '#fff',
             verticalCentered: true,
             sectionsColor : [],
