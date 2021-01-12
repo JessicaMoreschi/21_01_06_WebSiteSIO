@@ -10,6 +10,7 @@ var sketchMic = function(m) {
     myCanvas.parent("mic");
     micImgStatic = m.loadImage('../assets/image/04.1_Mic fermo.png')
     micImgDynamic = m.loadImage('../assets/image/04.2_Mic.gif')
+    micOnda = m.loadImage('../assets/image/10_Mic Registrazione.gif')
 
   };
 
@@ -34,6 +35,7 @@ var sketchMic = function(m) {
   m.micMove = function() {
     m.background(0);
     m.image(micImgDynamic, (myCanvas.width / 2 - dimMic / 2), (myCanvas.height / 2 - dimMic / 2), dimMic, dimMic)
+    // m.image(micOnda, (myCanvas.width / 2 - dimMic*1.5), (myCanvas.height / 2 - dimMic/3), dimMic*3, dimMic/1.5)
   };
 
   m.windowResized = function() {
