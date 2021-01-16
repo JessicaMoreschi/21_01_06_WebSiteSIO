@@ -44,16 +44,13 @@ var sketch = function(p) {
     mic = new p5.AudioIn();
     mic.start();
 
-
-    p.colorMode(p.HSB, 360, 100, 100); //colorMode(mode, max1, max2, max3, [maxA])
-    p.textFont(font, fontSizeMin);
-
     b1 = p.createButton('microfono');
     b1.position(p.width / 2 * 1.7, p.height / 2 * 0.1);
     b1.mousePressed(listener);
     b1.id('startBtn');
 
-
+    p.colorMode(p.HSB, 360, 100, 100); //colorMode(mode, max1, max2, max3, [maxA])
+    p.textFont(font, fontSizeMin);
 
 //togliere le seguenti tre righe se si vuole inserire tutti gli agents cliccando
     for (var i = 0; i < agentCount; i++) { //così ci sono già di default #agentCount agents
@@ -87,7 +84,6 @@ var sketch = function(p) {
     for (var i = init; i < agentCount; i++) {
       agents[i].update(noiseScale, noiseStrength, strokeWidth);
     }
-
   } //fine draw;
 
   p.keyReleased = function() {
@@ -129,3 +125,11 @@ function gotSpeech() {
      console.log(speechRec.resultString)
   }
 }
+
+function micGif(){
+document.getElementById('micBtn').style.backgroundImage="url('../assets/image/04.2_Mic.gif')";
+// myp5.listener()
+}
+
+function micPng(){
+document.getElementById('micBtn').style.backgroundImage="url('../assets/image/04.1_Mic fermo.png')"}

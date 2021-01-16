@@ -7,13 +7,18 @@
   <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
   <meta name="Resource-type" content="Document" />
   <link rel="stylesheet" href="./assets/font/stylesheet.css" type="text/css" charset="utf-8" />
-  <link href="./style/website.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./style/website.css"  type="text/css">
   <link rel="stylesheet" type="text/css" href="./dist/fullpage.css" />
   <script src="./dist/p5.min.js"></script>
-  <!-- <script src="./dist/p5.sound.min.js"></script> -->
-  <script type="text/javascript" src="./dist/fullpage.js"></script>
-  <script type="text/javascript" src="./public/sketchMic.js"></script>
-  <script type="text/javascript" src="./public/sketchSlider.js"></script>
+  <script src="./dist/fullpage.js"></script>
+  <script src="./public/sketch.js"></script>
+  <!-- <script src="./public/Agent.js"></script> -->
+  <!-- <script src="./dist/p5.sound.min.js"></script>
+  <script src="./dist/p5.speech.js"></script> -->
+
+
+
+
 
   <style>
     body {
@@ -145,8 +150,10 @@
           <div class="testoPanel">
             <p>Click on the <font face="typekaM">mic</font> <br> and <font face="typekaM">Spit It Out!</font>
             </p>
-          </div>
+          <!-- </div>
           <div id="mic">
+          </div> -->
+          <div class="mic" id="micBtn" onmousedown="micGif()" onmouseup="micPng()">
           </div>
           <a href="#firstPage/slide4"> <input id="arrowPanel"> </a>
         </div>
