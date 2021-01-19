@@ -51,7 +51,7 @@ var sketch = function(p) {
     texts = database.ref('texts'); //start collection
     //END FIREBASE SETTINGS
 
-    p.createCanvas(p.windowWidth, p.windowHeight);
+    p.createCanvas(p.windowWidth, p.windowHeight/100*85);
 
     mic = new p5.AudioIn();
     mic.start();
@@ -147,12 +147,12 @@ var sketch = function(p) {
   }
 
   p.windowResized = function() {
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
+    p.resizeCanvas(p.windowWidth, p.windowHeight/100*85);
   }
 
 }; //fine sketch
 
-var myp5 = new p5(sketch);
+var myp5 = new p5(sketch, 'canvas');
 
 function listener() {
   let continuous = true; //continua a registrare

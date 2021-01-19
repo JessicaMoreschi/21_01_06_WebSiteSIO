@@ -292,13 +292,13 @@ button:active {
 
 .canvas{
   position: absolute;
-  margin: 0;
+  margin: 0 0 0 0;
   left: 0;
   top: 10%;
   height: 85%;
   width: 100%;
   border: none;
-  outline:none
+  outline:none;
 }
 
 #imgBt3{
