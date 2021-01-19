@@ -224,7 +224,7 @@ button:active {
   transform: translateY(+5px)
 }
 
-#arrowPanel1, #arrowPanel2, #arrowPanel3 {
+#arrowPanel1, #arrowPanel2, #arrowPanel3, #arrowPanel4 {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -236,8 +236,16 @@ button:active {
   transform: translateX(-50%);
 }
 
-#arrowPanel1:hover, #arrowPanel2:hover, #arrowPanel3:hover{
+#arrowPanel4 {
+  transform: rotate(+90deg) translateY(30%) translateX(10%) ;
+}
+
+#arrowPanel1:hover, #arrowPanel2:hover, #arrowPanel3:hover, #arrowPanel4:hover{
   transform: translateX(-30%);
+}
+
+#arrowPanel4:hover {
+  transform: rotate(+90deg) translateY(30%) translateX(25%);
 }
 
 
@@ -374,7 +382,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   margin: 0 auto 50px auto;
   font-family:'typekaM';
   font-size: 8pt;
-  cursor: pointer
 }
 
 .mic{
@@ -382,4 +389,5 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  cursor: pointer
 }

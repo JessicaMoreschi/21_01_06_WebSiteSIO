@@ -25,12 +25,12 @@ var strokeWidth = 0.3;
 var fontSizeMin = 14;
 
 //impostazioni riconoscimento vocale //
-let speechRec;
-let lang = 'en-US'; //|| 'it-IT'
-let vol_map;
-let vol2 = 1;
-let spoke = false;
-var micBtn;
+var speechRec;
+var lang = 'en-US'; //|| 'it-IT'
+var vol_map;
+var vol2 = 1;
+var spoke = false;
+
 
 //impostazioni firebase
 var readData = []; //read data container
@@ -41,25 +41,27 @@ function setup() {
   database = firebase.database(); //start database
   texts = database.ref('texts'); //start collection
   //END FIREBASE SETTINGS
+  mycanvas = createCanvas(windowWidth, windowHeight / 100 * 85);
+  mycanvas.parent('canvas');
 
   speechRec = new p5.SpeechRec(lang, gotSpeech);
   mic = new p5.AudioIn();
   mic.start();
 
-  mycanvas = createCanvas(windowWidth, windowHeight / 100 * 85);
-  mycanvas.parent('canvas');
-  // mycanvas.mouseClicked(writeOnCanvas)
-
   colorMode(RGB, 150, 150, 150); //colorMode(mode, max1, max2, max3, [maxA])
   textFont(font, fontSizeMin);
 
   //load data from storage
-  texts.once("value", gotData)
+  texts.once("value", gotData);
   texts.on("value", updateData); //The “value” event is triggered when changes are made to the database
 
-  micBtn=document.getElementById('panel').contentWindow.document.getElementById('micBtn')
+  var micBtn=document.getElementById('panel').contentWindow.document.getElementById('micBtn');
   micBtn.addEventListener('mousedown', startMic);
-  micBtn.addEventListener('mouseup', stopMic)
+  micBtn.addEventListener('mouseup', stopMic);
+
+  mycanvas.mousePressed(writeOnCanvas);
+
+  document.getElementById('imgBt4').addEventListener('click', function(){document.getElementById('panel').contentWindow.location.reload(true)})
 }; //fine setup
 
 
@@ -70,11 +72,11 @@ function draw() {
   vol_map = map(vol, 0, 1, 1, 150);
   // console.log("volume " + vol_map);
 
-  if (getAudioContext().state !== 'running') {
-    text('non funziona audio', width / 2, height / 2);
-  } else {
-    text('audio abilitato', width / 2, height / 2);
-  }
+  // if (getAudioContext().state !== 'running') {
+  //   text('non funziona audio', width / 2, height / 2);
+  // } else {
+  //   text('audio abilitato', width / 2, height / 2);
+  // }
 
   fill('rgba(255,255,255, 0.05)');
   noStroke();
@@ -128,6 +130,30 @@ function writeOnCanvas() {
     vol_map: vol_map
   }
   texts.push(data); //push user data to the firebase collection
+  spoke = false;
+  }
+}
+
+function startMic() {
+  console.log("listening");
+  let continuous = true; //continua a registrare
+  let interim = false;
+  spoke = true;
+  speechRec.start(continuous, interim);
+  document.getElementById('panel').contentWindow.document.getElementById('micBtn').style.backgroundImage = "url('../assets/image/04.2_Mic.gif')"
+}
+
+function stopMic() {
+  document.getElementById('panel').contentWindow.document.getElementById('micBtn').style.backgroundImage = "url('../assets/image/04.1_Mic fermo.png')"
+  console.log("release")
+}
+
+function gotSpeech() {
+  if (speechRec.resultValue) {
+    let text = speechRec.resultString;
+    letters = text + ' ';
+    console.log(speechRec.resultString)
+    console.log("sono nella funzione gotspeech");
   }
 }
 
@@ -139,28 +165,6 @@ function keyReleased() {
   }
   if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
 };
-
-function startMic() {
-  let continuous = true; //continua a registrare
-  let interim = false;
-  speechRec.start(continuous, interim);
-  console.log("listening");
-  document.getElementById('panel').contentWindow.document.getElementById('micBtn').style.backgroundImage = "url('../assets/image/04.2_Mic.gif')"
-}
-
-function stopMic() {
-  document.getElementById('panel').contentWindow.document.getElementById('micBtn').style.backgroundImage = "url('../assets/image/04.1_Mic fermo.png')"
-}
-
-function gotSpeech() {
-  if (speechRec.resultValue) {
-    let text = speechRec.resultString;
-    letters = text + ' ';
-    spoke = true
-    console.log(speechRec.resultString)
-    console.log("sono nella funzione gotspeech");
-  }
-}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight / 100 * 85);
