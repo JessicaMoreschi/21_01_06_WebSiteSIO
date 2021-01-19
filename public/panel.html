@@ -95,7 +95,9 @@
 
 
 
-
+  <div id="header">
+    <img id="avanti" height="50px" src="../assets/image/avanzamento-03-03.png">
+  </div>
 
   <div id="fullpage">
     <div class="section" id="section0">
@@ -106,7 +108,7 @@
               <font face="typekaM">write in the diary!</font>
             </p>
           </div>
-          <a href="#firstPage/slide2"> <input id="arrowPanel1"> </a>
+          <a href="#firstPage/slide2"> <input id="arrowPanel1" onclick="document.getElementById('avanti').setAttribute('src', '../assets/image/avanzamento-04.png')"> </a>
         </div>
       </div>
 
@@ -143,17 +145,17 @@
               </tr>
             </table>
           </div>
-          <a href="#firstPage/slide3"> <input id="arrowPanel2"> </a>
+          <a href="#firstPage/slide3"> <input id="arrowPanel2" onclick="document.getElementById('avanti').setAttribute('src', '../assets/image/avanzamento-05.png')"> </a>
         </div>
       </div>
 
       <div class="slide" id="slide3" data-anchor="slide3">
         <div class="intro">
           <div class="testoPanel">
-            <p>Click on the <font face="typekaM">mic</font> <br> and <font face="typekaM">Spit It Out!</font>
+            <p><font face="typekaM">Hold </font>the <font face="typekaM">mic</font> <br> and <font face="typekaM">Spit It Out!</font>
             </p>
-            <input type="button" class="mic" id="micBtn">
-            <a href="#firstPage/slide4"> <input id="arrowPanel3"> </a>
+            <div class="mic" id="micBtn"></div>
+            <a href="#firstPage/slide4"> <input id="arrowPanel3" onclick="document.getElementById('avanti').setAttribute('src', '../assets/image/avanzamento-06.png')"> </a>
           </div>
         </div>
       </div>
@@ -184,7 +186,7 @@
       navigation: false,
       navigationPosition: 'right',
       css3: true,
-      slidesNavigation: true,
+      slidesNavigation: false,
     });
   </script>
 

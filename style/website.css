@@ -229,7 +229,7 @@ button:active {
   margin: 0;
   padding: 0;
   top: auto;
-  bottom:20%;
+  bottom:10%;
   height: 25px;
   width: 25px;
   background-image: url("../assets/image/07.1_freccia navigazione ferma b.png");
@@ -312,7 +312,7 @@ button:active {
 #imgBt4{
   position: absolute;
   margin: 0;
-  bottom: 70%;
+  bottom: 69%;
   width: 10px;
   right: 6%;
   color: #ffffff;
@@ -374,6 +374,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   margin: 0 auto 50px auto;
   font-family:'typekaM';
   font-size: 8pt;
+  cursor: pointer
 }
 
 .mic{
