@@ -29,6 +29,8 @@ let speechRec;
 let lang = 'en-US'; //|| 'it-IT'
 let vol_map;
 let vol2 = 1;
+let spoke = false;
+var micBtn;
 
 //impostazioni firebase
 var readData = []; //read data container
@@ -40,12 +42,13 @@ function setup() {
   texts = database.ref('texts'); //start collection
   //END FIREBASE SETTINGS
 
-  mycanvas = createCanvas(windowWidth, windowHeight / 100 * 85);
-  mycanvas.parent('canvas');
-
   speechRec = new p5.SpeechRec(lang, gotSpeech);
   mic = new p5.AudioIn();
   mic.start();
+
+  mycanvas = createCanvas(windowWidth, windowHeight / 100 * 85);
+  mycanvas.parent('canvas');
+  // mycanvas.mouseClicked(writeOnCanvas)
 
   colorMode(RGB, 150, 150, 150); //colorMode(mode, max1, max2, max3, [maxA])
   textFont(font, fontSizeMin);
@@ -54,7 +57,7 @@ function setup() {
   texts.once("value", gotData)
   texts.on("value", updateData); //The “value” event is triggered when changes are made to the database
 
-  var micBtn=document.getElementById('panel').contentWindow.document.getElementById('micBtn')
+  micBtn=document.getElementById('panel').contentWindow.document.getElementById('micBtn')
   micBtn.addEventListener('mousedown', startMic);
   micBtn.addEventListener('mouseup', stopMic)
 }; //fine setup
@@ -103,7 +106,9 @@ function updateData(data) { //update text list
   }
 }
 
+
 function writeOnCanvas() {
+  if (spoke==true) {
   var rCol=document.getElementById('panel').contentWindow.document.getElementById('slider1').value
   var gCol=document.getElementById('panel').contentWindow.document.getElementById('slider2').value
   var bCol=document.getElementById('panel').contentWindow.document.getElementById('slider3').value
@@ -123,6 +128,7 @@ function writeOnCanvas() {
     vol_map: vol_map
   }
   texts.push(data); //push user data to the firebase collection
+  }
 }
 
 function keyReleased() {
@@ -150,6 +156,7 @@ function gotSpeech() {
   if (speechRec.resultValue) {
     let text = speechRec.resultString;
     letters = text + ' ';
+    spoke = true
     console.log(speechRec.resultString)
     console.log("sono nella funzione gotspeech");
   }
