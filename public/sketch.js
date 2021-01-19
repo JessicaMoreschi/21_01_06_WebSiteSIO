@@ -61,7 +61,6 @@ function setup() {
 
   mycanvas.mousePressed(writeOnCanvas);
 
-  document.getElementById('imgBt4').addEventListener('click', function(){document.getElementById('panel').contentWindow.location.reload(true)})
 }; //fine setup
 
 
