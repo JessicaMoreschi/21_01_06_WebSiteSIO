@@ -212,7 +212,7 @@ button:active {
 
 
 
-#arrow {
+#arrow1, #arrow2 {
   position: absolute;
   top: 80%;
   left: 48%;
@@ -220,12 +220,12 @@ button:active {
   background-image: url("../assets/image/07.1_freccia navigazione ferma.png");
 }
 
-#arrow:hover {
+#arrow1:hover, #arrow2:hover {
   background-image: url("../assets/image/07.2_freccia navigazione.gif");
   transform: translateY(+5px)
 }
 
-#arrowPanel {
+#arrowPanel1, #arrowPanel2, #arrowPanel3 {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -237,14 +237,14 @@ button:active {
   transform: translateX(-50%);
 }
 
-#arrowPanel:hover{
+#arrowPanel1:hover, #arrowPanel2:hover, #arrowPanel3:hover{
   transform: translateX(-30%);
 }
 
 
 
 
-#arrow2 {
+#arrow3 {
   position: absolute;
   top: 80%;
   left: 48%;
@@ -253,7 +253,7 @@ button:active {
   background-image: url("../assets/image/07.1_freccia navigazione ferma.png");
 }
 
-#arrow2:hover {
+#arrow3:hover {
   background-image: url("../assets/image/07.2_freccia navigazione.gif");
   transform: rotate(180deg) translateY(+5px);
 }
@@ -340,7 +340,7 @@ button:active {
 
 input[type=range] {
   width: 40pt;
-  margin: 0 0 0 -18px;
+  margin: 0 0 0 0;
   background-color: transparent;
   -webkit-appearance: none;
 }
@@ -370,11 +370,11 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .slider, .mic{
-  width: 100%;
+  width: 90%;
   height: 100px;
-  margin: 0 0 30px 0;
+  margin: 0 auto 50px auto;
   font-family:'typekaM';
-  font-size: 10pt;
+  font-size: 8pt;
 }
 
 .mic{
