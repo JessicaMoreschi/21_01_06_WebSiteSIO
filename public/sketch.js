@@ -46,7 +46,6 @@ function setup() {
 
   speechRec = new p5.SpeechRec(lang, gotSpeech);
   mic = new p5.AudioIn();
-  mic.start();
 
   colorMode(RGB, 150, 150, 150); //colorMode(mode, max1, max2, max3, [maxA])
   textFont(font, fontSizeMin);
@@ -60,6 +59,8 @@ function setup() {
   micBtn.addEventListener('mouseup', stopMic);
 
   mycanvas.mousePressed(writeOnCanvas);
+
+  document.getElementById('panel').contentWindow.document.getElementById('arrowPanel4').addEventListener('click', closePanel)//chiudi pannello
 
 }; //fine setup
 
@@ -130,12 +131,17 @@ function writeOnCanvas() {
   }
   texts.push(data); //push user data to the firebase collection
   spoke = false;
+  let phrase=document.getElementById('panel').contentWindow.document.getElementById('phrase');
+  phrase.innerHTML=""
+  phrase.style.padding= '0 0 0 0';
   }
+  parent.document.getElementById('panel').style.display = 'none';
 }
 
 function startMic() {
   console.log("listening");
-  let continuous = true; //continua a registrare
+  mic.start();
+  let continuous = false; //continua a registrare
   let interim = false;
   spoke = true;
   speechRec.start(continuous, interim);
@@ -143,14 +149,18 @@ function startMic() {
 }
 
 function stopMic() {
+  mic.stop();
   document.getElementById('panel').contentWindow.document.getElementById('micBtn').style.backgroundImage = "url('../assets/image/04.1_Mic fermo.png')"
-  console.log("release")
+  console.log("stop")
 }
 
 function gotSpeech() {
   if (speechRec.resultValue) {
     let text = speechRec.resultString;
     letters = text + ' ';
+    let phrase=document.getElementById('panel').contentWindow.document.getElementById('phrase');
+    phrase.innerHTML="' "+speechRec.resultString+" '"
+    phrase.style.padding= '0 20px 20px 20px';
     console.log(speechRec.resultString)
     console.log("sono nella funzione gotspeech");
   }
@@ -167,4 +177,10 @@ function keyReleased() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight / 100 * 85);
+}
+
+function closePanel(){
+  parent.document.getElementById('panel').contentWindow.document.getElementById('avanti').setAttribute('src', '../assets/image/avanzamento-03-03.png');
+  parent.document.getElementById('panel').style.display = 'none';
+  location.reload()
 }
