@@ -111,9 +111,9 @@ function updateData(data) { //update text list
 
 function writeOnCanvas() {
   if (spoke==true) {
-  var rCol=document.getElementById('panel').contentWindow.document.getElementById('slider1').value
-  var gCol=document.getElementById('panel').contentWindow.document.getElementById('slider2').value
-  var bCol=document.getElementById('panel').contentWindow.document.getElementById('slider3').value
+  var rCol=document.getElementById('panel').contentWindow.document.getElementById('slider1').value;
+  var gCol=document.getElementById('panel').contentWindow.document.getElementById('slider2').value;
+  var bCol=document.getElementById('panel').contentWindow.document.getElementById('slider3').value;
 
   agents[agentCount] = new Agent(mouseX, mouseY, color(rCol, gCol, bCol), letters, vol_map);
   if (getAudioContext().state !== 'running') {
